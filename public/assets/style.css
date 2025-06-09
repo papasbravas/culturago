@@ -1,0 +1,758 @@
+/* --- Reset y base --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* --- Landing Mejorada y Carrusel --- */
+.bienvenida {
+    background: #35424a;
+    color: #ffd700;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin: 2rem auto 2rem auto;
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.25em;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.acciones-rapidas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.acciones-rapidas a {
+    background: #ffd700;
+    color: #35424a;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+.acciones-rapidas a:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+.carrusel-eventos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.carrusel-track {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 340px;
+}
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1.5rem;
+    width: 320px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+.event-card h3 {
+    color: #35424a;
+    margin-bottom: 0.5rem;
+}
+.event-card p {
+    margin: 0.2rem 0 0.5rem 0;
+}
+.event-card .btn {
+    margin-top: auto;
+}
+.carrusel-btn {
+    background: #35424a;
+    color: #ffd700;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: none;
+}
+.carrusel-btn:hover {
+    background: #ffd700;
+    color: #35424a;
+}
+@media (max-width: 700px) {
+    .bienvenida { font-size: 1em; padding: 1rem; }
+    .event-card, .carrusel-track { width: 95vw; min-width: 95vw; max-width: 95vw; }
+    .carrusel-eventos { gap: 0.5rem; }
+}
+
+/* --- Secciones landing --- */
+.ventajas {
+    background: #f4f4f4;
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+.ventajas h2 {
+    color: #35424a;
+    margin-bottom: 20px;
+}
+.ventajas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 500px;
+    text-align: left;
+}
+.ventajas ul li {
+    padding-left: 32px;
+    margin-bottom: 14px;
+    font-size: 1.08em;
+    color: #333;
+}
+.about {
+    background: #fff;
+    padding: 35px 0 30px 0;
+    text-align: center;
+}
+.about h2 {
+    color: #35424a;
+    margin-bottom: 15px;
+}
+.about p {
+    color: #444;
+    font-size: 1.08em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    background: #35424a;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    border-top: 4px solid #ffd700;
+    margin-top: 40px;
+    font-size: 1.08em;
+    letter-spacing: 1px;
+}
+.footer-main .footer-links {
+    margin-bottom: 12px;
+}
+.footer-main .footer-links a {
+    color: #ffd700;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.footer-main .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-main .footer-logo {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #35424a;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+.btn-editar {
+    background: #6c7a89;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 18px;
+    font-size: 0.98em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+}
+.btn-editar:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+
+/* --- Favoritos --- */
+.favorito-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+    margin-left: 8px;
+}
+.favorito-btn.favorito-activo {
+    color: #e74c3c;
+}
+.favorito-btn:hover {
+    color: #e74c3c;
+}
+
+/* --- Usuario info arriba derecha --- */
+.usuario-info {
+    position: absolute;
+    top: 18px;
+    right: 32px;
+    z-index: 10;
+    background: rgba(53,66,74,0.95);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.usuario-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.usuario-info a:hover {
+    color: #ffd700;
+}
+@media (max-width: 700px) {
+    .usuario-info {
+        position: static;
+        margin: 0 auto 10px auto;
+        display: block;
+        text-align: center;
+        width: fit-content;
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+}
+
+/* --- Eventos Page Styles --- */
+.eventos-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 24px 24px 24px;
+}
+.eventos-container h1 {
+    color: #35424a;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.eventos-busqueda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+.eventos-busqueda input[type="number"] {
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 120px;
+}
+.eventos-busqueda button,
+.eventos-busqueda a {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #ffd700;
+    color: #35424a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.eventos-busqueda button:hover,
+.eventos-busqueda a:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+.eventos-crear {
+    margin-top: 30px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 22px 18px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.eventos-crear h2 {
+    color: #35424a;
+    margin-bottom: 14px;
+    text-align: center;
+}
+.eventos-crear label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+.eventos-crear input,
+.eventos-crear textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical;
+}
+.eventos-crear button {
+    background: #ffd700;
+    color: #35424a;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+.eventos-crear button:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.evento-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 320px;
+    transition: box-shadow 0.2s;
+}
+.evento-card h3 {
+    color: #35424a;
+    margin-bottom: 0.5rem;
+    font-size: 1.25em;
+}
+.evento-desc {
+    color: #555;
+    margin-bottom: 0.7rem;
+}
+.evento-card p {
+    margin: 0.2rem 0 0.5rem 0;
+}
+.evento-reserva-form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.evento-sinplazas {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
+.evento-admin {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+}
+.evento-admin-label {
+    background: #35424a;
+    color: #ffd700;
+    border-radius: 8px;
+    padding: 2px 10px;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+@media (max-width: 700px) {
+    .eventos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .evento-card {
+        min-height: unset;
+        padding: 1rem;
+    }
+}
+
+/* --- Login Page Styles --- */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+    text-align: center;
+}
+.login-container h2 {
+    color: #35424a;
+    margin-bottom: 22px;
+    font-size: 1.5em;
+}
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+}
+.login-container input[type="email"],
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #f9f9f9;
+}
+.login-container button[type="submit"] {
+    background: #ffd700;
+    color: #35424a;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 10px;
+}
+.login-container button[type="submit"]:hover {
+    background: #35424a;
+    color: #ffd700;
+}
+.login-container p {
+    margin-bottom: 18px;
+}
+
+/* --- Usuarios Admin Table Styles --- */
+.usuarios-container {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 32px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.usuarios-container h2 {
+    color: #35424a;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.usuarios-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.usuarios-table th, .usuarios-table td {
+    padding: 14px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+.usuarios-table th {
+    background: #35424a;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.08em;
+}
+.usuarios-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.usuarios-table tr:hover {
+    background: #f1f7ff;
+}
+@media (max-width: 700px) {
+    .usuarios-table th, .usuarios-table td {
+        padding: 8px 6px;
+    }
+    .usuarios-container {
+        padding: 12px 2px 12px 2px;
+    }
+    .usuarios-table th, .usuarios-table td {
+        padding: 8px 2px;
+        font-size: 0.98em;
+    }
+}
+
+/* --- Mis Reservas Table Styles --- */
+.reservas-container {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 32px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reservas-container h2 {
+    color: #35424a;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.reservas-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.reservas-table th, .reservas-table td {
+    padding: 14px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+.reservas-table th {
+    background: #35424a;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.08em;
+}
+.reservas-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.reservas-table tr:hover {
+    background: #f1f7ff;
+}
+@media (max-width: 700px) {
+    .reservas-container {
+        padding: 12px 2px 12px 2px;
+    }
+    .reservas-table th, .reservas-table td {
+        padding: 8px 2px;
+        font-size: 0.98em;
+    }
+}
+
+/* --- Ajustes de Usuario --- */
+.ajustes-container {
+    max-width: 420px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+    text-align: center;
+}
+.ajustes-container h2 {
+    color: #35424a;
+    margin-bottom: 22px;
+    font-size: 1.5em;
+}
+.ajustes-form label {
+    display: block;
+    margin-bottom: 18px;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+}
+.ajustes-form input[type="text"],
+.ajustes-form input[type="email"] {
+    width: 100%;
+    padding: 9px 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #f9f9f9;
+}
+.ajustes-form .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+.ajustes-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.alerta-error {
+    background: #ffe0e0;
+    color: #c0392b;
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.alerta-exito {
+    background: #e0ffe0;
+    color: #27ae60;
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .ajustes-container {
+        padding: 18px 6px;
+    }
+}
+
+/* --- Responsive general --- */
+@media (max-width: 900px) {
+    .carrusel-eventos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-card {
+        width: 95vw;
+        min-width: 95vw;
+        max-width: 95vw;
+    }
+}
+@media (max-width: 600px) {
+    .ventajas, .about {
+        padding: 25px 5px 20px 5px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* --- Gestión de Categorías Admin --- */
+.categoria-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(53,66,74,0.07);
+    transition: box-shadow 0.2s;
+}
+.categoria-card:hover {
+    box-shadow: 0 4px 18px rgba(53,66,74,0.13);
+}
+.categoria-card h3 {
+    color: #35424a;
+    margin-bottom: 1.2rem;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+.admin-cat-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    margin-bottom: 1rem;
+    background: transparent;
+}
+.admin-cat-table th, .admin-cat-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    font-size: 1em;
+}
+.admin-cat-table th {
+    background: #35424a;
+    color: #ffd700;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+}
+.admin-cat-table tr:nth-child(even) td {
+    background: #f4f4f4;
+}
+.admin-cat-table select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    font-size: 1em;
+}
+.admin-cat-table .btn-editar {
+    margin-left: 8px;
+    padding: 6px 16px;
+    font-size: 0.98em;
+}
+@media (max-width: 700px) {
+    .categoria-card {
+        padding: 1rem 0.5rem;
+    }
+    .admin-cat-table th, .admin-cat-table td {
+        padding: 7px 4px;
+        font-size: 0.97em;
+    }
+}
